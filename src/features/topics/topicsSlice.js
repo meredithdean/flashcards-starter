@@ -12,13 +12,13 @@ export const topicsSlice = createSlice({
                 name: name,
                 id: id,
                 icon: icon,
-                quizIds: [],
+                quizIds: []
             };
         },
         addQuizIdForTopic: (state, action) => {
-            const {quizId, topicId} = action.payload;
+            const { topicId, quizId } = action.payload;
             state.topics[topicId].quizIds.push(quizId);
-        }
+        },
     }
 });
 
