@@ -14,11 +14,11 @@ export const quizzesSlice = createSlice({
     }
 });
 
-export const addQuizForTopicId = (payload) => {
-    const {topicId, id} = payload;
+export const addQuizForTopicId = (quiz) => {
+    const {topicId, id} = quiz;
     return (dispatch) => {
-        dispatch(quizzesSlice.actions.addQuiz(payload));
-        dispatch(addQuizIdForTopic({topicId: topicId, quizId: id}));
+        dispatch(quizzesSlice.actions.addQuiz(quiz));
+        dispatch(addQuizIdForTopic({topicId: topicId, id: id}));
     }
 };
 
